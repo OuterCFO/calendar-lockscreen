@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/wallpaper.js": {
+      "includeFiles": "fonts/**",
+      "maxDuration": 30
+    }
+  }
+}

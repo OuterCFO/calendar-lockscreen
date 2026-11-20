@@ -1,12 +1,19 @@
 {
   "name": "calendar-lockscreen",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
-  "description": "A daylight-aware calendar wallpaper for iPhone, powered by Scriptable and Shortcuts",
+  "type": "module",
+  "description": "A daylight-aware calendar wallpaper for iPhone, rendered by a small server and applied by Shortcuts",
   "scripts": {
-    "test": "TZ=Europe/Paris node tests/verify.cjs",
-    "previews": "TZ=Europe/Paris node tests/verify.cjs --previews"
+    "test": "node --test tests/*.test.js",
+    "preview": "node scripts/preview.js"
   },
-  "engines": { "node": ">=22" },
-  "devDependencies": { "@napi-rs/canvas": "0.1.100" }
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "0.1.100",
+    "ical.js": "2.2.1",
+    "suncalc": "1.9.0"
+  }
 }
